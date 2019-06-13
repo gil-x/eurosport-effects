@@ -1,4 +1,3 @@
-/* latin-ext */
 @font-face {
     font-family: 'ESP Circular TT';
     font-style: normal;
@@ -8,6 +7,7 @@
 
 $black50: rgba(0,0,0,0.5);
 $black75: rgba(0,0,0,0.75);
+$black100: rgba(0,0,0,1);
 $white: rgba(255,255,255,0.85);
 $red: rgba(213,0,50,1);
 
@@ -36,38 +36,41 @@ body {
     background-size: cover;
 }
 
-@keyframes extend {
-    0% { grid-column-start: 4; }
-    100% { grid-column-start: 3; }
-}
-
-@keyframes slide-down-10 {
-    0% { opacity: 0; transform: translateY(-5px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slide-down-50 {
-    0% { opacity: 0; background: $black50; transform: translateY(-50px); }
-    75% { opacity: 0; background: $black50; transform: translateY(-15px); }
-    100% { opacity: 1; background: $black75; transform: translateY(0); }
-}
-
-
-
+@import "animations";
 
 #animation-1 {
-    // display: flex;
-    // flex-wrap: wrap;
     position: fixed;
-    top: 30px;
+    top: 28px;
     left: 32px;
     width: 245px;
-    height: 172px;
+    height: 174px;
     display: grid;
     grid-template-columns: 122px 1px 122px;
-    grid-template-rows: 14px 1px 107px 1px 40px;
+    grid-template-rows: 14px 3px 107px 1px 40px;
     color: $white;
-    overflow: hidden;
+
+    .block {
+        width: 122px;
+        height: 107px;
+        position: fixed;
+        top: 45px;
+    }
+
+    .red {
+        left: 32px;
+        background: $red;
+        animation-name: block-l-shrink;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+    }
+
+    .black {
+        right: 1643px;
+        background: $black100;
+        animation-name: block-r-shrink;
+        animation-duration: 0.75s;
+        animation-fill-mode: forwards;
+    }
 
     .head {
         grid-column-start: 1;
@@ -84,20 +87,47 @@ body {
             font-size: 10px;
             font-weight: 600;
 
-            img {
-                width: 12px;
-                margin-right: 2px;
-            }
-
             span {
                 font-size: 12px;
+                
             }
+
+            
+        }
+
+        .head-left {
+            display: flex;
+
+            div {
+                overflow: hidden;
+
+                span {
+                    display: inline-block;
+                    animation-name: appears-from-left;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            img {
+                width: 12px;
+                height: auto;
+                margin: 0 2px 2px 0;
+                animation-name: smooth-slide-to-left;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .head-right {
+            animation-name: appears-from-bottom;
+            animation-duration: 0.75s;
+            animation-fill-mode: forwards;
         }
     }
 
     .box {
         text-align: center;
-        // flex-basis: 50%;
         background: $black50;
         padding: 4px;
 
@@ -108,11 +138,13 @@ body {
 
         .text {
             display: inline-block;
+            opacity: 0;
             font-size: 10px;
             font-weight: 600;
-            // letter-spacing: 1px;
             animation-name: slide-down-10;
             animation-duration: 0.5s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
         }
     }
 
@@ -121,7 +153,6 @@ body {
         grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 4;
-        // width: 45px;
         overflow: hidden;
     }
 
@@ -130,25 +161,21 @@ body {
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 4;
-        // margin-left: 50px;
-        // width: 45px;
-        // overflow: hidden;
-        // animation: extend 1s;
     }
 
     .count {
-        // flex-basis: 100%;
-        // text-align: center;
+        height: 0px;
+        padding: 0 0 0 74px;
         background: $black75;
-        
-        padding: 3px 0 0 74px;
+ 
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 5;
         grid-row-end: 6;
         animation-name: slide-down-50;
-        animation-duration: 1s;
-        z-index: -100;
+        animation-duration: 0.85s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
 
         .text {
             display: inline-block;
