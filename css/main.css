@@ -12,12 +12,21 @@
 *, *:before, *:after {
   box-sizing: border-box; }
 
-body {
-  background-image: url("../medias/04/bg01.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh; }
+#summary {
+  font-family: monospace;
+  font-size: 28px;
+  margin: 100px; }
+  #summary ul li {
+    margin: 20px;
+    list-style-type: square; }
+    #summary ul li a {
+      color: rgba(0, 0, 0, 0.5);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.5s; }
+    #summary ul li a:hover {
+      color: rgba(0, 0, 0, 0.75);
+      text-decoration: underline; }
 
 .hidden {
   display: none !important; }
@@ -106,6 +115,21 @@ body {
   0% {
     transform: translateX(5px); }
   100% {
+    transform: translateX(0); } }
+
+/* ANIMATION #4 */
+@keyframes slide-up-90 {
+  0% {
+    transform: translateY(90px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes appears-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px); }
+  100% {
+    opacity: 1;
     transform: translateX(0); } }
 
 @keyframes crawl-to-left {
@@ -246,7 +270,10 @@ body {
 #animation-2 {
   position: fixed;
   bottom: 0;
-  width: 100vw; }
+  width: 100vw;
+  animation-name: slide-up-90;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
   #animation-2 .content-bar {
     height: 60px;
     display: flex;
@@ -261,7 +288,12 @@ body {
       align-items: center;
       padding-right: 40px; }
       #animation-2 .content-bar .eurosport .logo {
-        width: 180px; }
+        opacity: 0;
+        width: 180px;
+        animation-name: appears-from-right;
+        animation-duration: 0.5s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards; }
     #animation-2 .content-bar .text-container {
       overflow: hidden; }
       #animation-2 .content-bar .text-container .text {
@@ -288,6 +320,6 @@ body {
             width: 25px; }
   #animation-2 .footer {
     height: 90px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.75);
     border-top: 2px solid #fff; }
 
