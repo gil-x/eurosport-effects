@@ -49,27 +49,44 @@ body {
     grid-template-rows: 14px 3px 107px 1px 40px;
     color: $white;
 
-    .block {
+    .effect-box {
         width: 122px;
         height: 107px;
         position: fixed;
+        z-index: 200;
         top: 45px;
+        overflow: hidden;
+
+        div {
+            width: 122px;
+            height: 107px;
+        }
     }
 
-    .red {
+    .effect-box.red {
         left: 32px;
-        background: $red;
-        animation-name: block-l-shrink;
-        animation-duration: 0.75s;
-        animation-fill-mode: forwards;
+
+        div {
+            background: $red;
+            transform: translateX(122px);
+            
+            animation-name: block-l-pass;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+        }
     }
 
-    .black {
-        right: 1643px;
-        background: $black100;
-        animation-name: block-r-shrink;
-        animation-duration: 0.75s;
-        animation-fill-mode: forwards;
+    .effect-box.black {
+        left: 155px;
+
+        div {
+            background: $black100;
+            transform: translateX(-122px);
+
+            animation-name: block-r-pass;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+        }
     }
 
     .head {
@@ -78,9 +95,15 @@ body {
         grid-row-start: 1;
         grid-row-end: 2;
 
+        opacity: 0;
         display: flex;
         align-items: baseline;
         justify-content: space-between;
+
+        animation-name: appears;
+        animation-duration: 0.5s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
 
         div {
             color: $black75;
@@ -91,8 +114,6 @@ body {
                 font-size: 12px;
                 
             }
-
-            
         }
 
         .head-left {
@@ -126,14 +147,19 @@ body {
         }
     }
 
-    .box {
+    .content-box {
         text-align: center;
         background: $black50;
         padding: 4px;
+        opacity: 0;
+        animation-name: appears;
+        animation-duration: 0.25s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
 
         img {
             width: 86px;
-            margin-bottom: 3px;
+            margin-bottom: 5px;
         }
 
         .text {
@@ -173,14 +199,20 @@ body {
         grid-row-start: 5;
         grid-row-end: 6;
         animation-name: slide-down-50;
-        animation-duration: 0.85s;
-        animation-delay: 0.25s;
+        animation-duration: 0.75s;
+        animation-delay: 1s;
         animation-fill-mode: forwards;
 
         .text {
             display: inline-block;
+            opacity: 0;
             font-size: 33px;
             letter-spacing: 2px;
+
+            animation-name: appears;
+            animation-duration: 0.25s;
+            animation-delay: 0.75s;
+            animation-fill-mode: forwards;
         }
     }
 }

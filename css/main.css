@@ -49,25 +49,33 @@
     height: 40px;
     padding: 3px 0 0 74px; } }
 
-@keyframes block-l-shrink {
+@keyframes appears {
   0% {
-    width: 122px;
-    border: 0px solid #fff; }
-  50% {
-    border-right: 10px solid #fff; }
+    opacity: 0; }
   100% {
-    width: 0px;
-    border-right: 0px solid #fff; } }
+    opacity: 1; } }
 
-@keyframes block-r-shrink {
+@keyframes block-l-pass {
   0% {
-    width: 122px;
-    border: 0px solid #fff; }
-  50% {
-    border-left: 10px solid #fff; }
+    transform: translateX(122px); }
+  15% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(0); }
   100% {
-    width: 0px;
-    border-left: 0px solid #fff; } }
+    transform: translateX(-122px);
+    border-right: 22px solid #fff; } }
+
+@keyframes block-r-pass {
+  0% {
+    transform: translateX(-122px); }
+  15% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(122px);
+    border-left: 22px solid #fff; } }
 
 @keyframes appears-from-left {
   0% {
@@ -103,31 +111,45 @@
   grid-template-columns: 122px 1px 122px;
   grid-template-rows: 14px 3px 107px 1px 40px;
   color: rgba(255, 255, 255, 0.85); }
-  #animation-1 .block {
+  #animation-1 .effect-box {
     width: 122px;
     height: 107px;
     position: fixed;
-    top: 45px; }
-  #animation-1 .red {
-    left: 32px;
-    background: #d50032;
-    animation-name: block-l-shrink;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards; }
-  #animation-1 .black {
-    right: 1643px;
-    background: black;
-    animation-name: block-r-shrink;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards; }
+    z-index: 200;
+    top: 45px;
+    overflow: hidden; }
+    #animation-1 .effect-box div {
+      width: 122px;
+      height: 107px; }
+  #animation-1 .effect-box.red {
+    left: 32px; }
+    #animation-1 .effect-box.red div {
+      background: #d50032;
+      transform: translateX(122px);
+      animation-name: block-l-pass;
+      animation-duration: 1.25s;
+      animation-fill-mode: forwards; }
+  #animation-1 .effect-box.black {
+    left: 155px; }
+    #animation-1 .effect-box.black div {
+      background: black;
+      transform: translateX(-122px);
+      animation-name: block-r-pass;
+      animation-duration: 1.25s;
+      animation-fill-mode: forwards; }
   #animation-1 .head {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    opacity: 0;
     display: flex;
     align-items: baseline;
-    justify-content: space-between; }
+    justify-content: space-between;
+    animation-name: appears;
+    animation-duration: 0.5s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards; }
     #animation-1 .head div {
       color: rgba(0, 0, 0, 0.75);
       font-size: 10px;
@@ -154,14 +176,19 @@
       animation-name: appears-from-bottom;
       animation-duration: 0.75s;
       animation-fill-mode: forwards; }
-  #animation-1 .box {
+  #animation-1 .content-box {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
-    padding: 4px; }
-    #animation-1 .box img {
+    padding: 4px;
+    opacity: 0;
+    animation-name: appears;
+    animation-duration: 0.25s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards; }
+    #animation-1 .content-box img {
       width: 86px;
       margin-bottom: 3px; }
-    #animation-1 .box .text {
+    #animation-1 .content-box .text {
       display: inline-block;
       opacity: 0;
       font-size: 10px;
@@ -195,6 +222,11 @@
     animation-fill-mode: forwards; }
     #animation-1 .count .text {
       display: inline-block;
+      opacity: 0;
       font-size: 33px;
-      letter-spacing: 2px; }
+      letter-spacing: 2px;
+      animation-name: appears;
+      animation-duration: 0.25s;
+      animation-delay: 0.75s;
+      animation-fill-mode: forwards; }
 
