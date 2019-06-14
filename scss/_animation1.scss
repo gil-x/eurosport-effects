@@ -1,0 +1,178 @@
+#animation-1 {
+    position: fixed;
+    top: 28px;
+    left: 32px;
+    width: 245px;
+    height: 174px;
+    display: grid;
+    grid-template-columns: 122px 1px 122px;
+    grid-template-rows: 14px 3px 107px 1px 40px;
+    color: $white;
+
+    .effect-box {
+        width: 122px;
+        height: 107px;
+        position: fixed;
+        z-index: 200;
+        top: 45px;
+        overflow: hidden;
+
+        div {
+            width: 122px;
+            height: 107px;
+        }
+    }
+
+    .effect-box.red {
+        left: 32px;
+
+        div {
+            background: $red;
+            transform: translateX(122px);
+            
+            animation-name: block-l-pass;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .effect-box.black {
+        left: 155px;
+
+        div {
+            background: $black100;
+            transform: translateX(-122px);
+
+            animation-name: block-r-pass;
+            animation-duration: 1.25s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .head {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        opacity: 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        animation-name: appears;
+        animation-duration: 0.5s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
+
+        div {
+            color: $black75;
+            font-size: 10px;
+            font-weight: 600;
+
+            span {
+                font-size: 12px;
+                
+            }
+        }
+
+        .head-left {
+            display: flex;
+
+            div {
+                overflow: hidden;
+
+                span {
+                    display: inline-block;
+                    animation-name: appears-from-left;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                }
+            }
+
+            img {
+                width: 12px;
+                height: auto;
+                margin: 0 2px 2px 0;
+                animation-name: smooth-slide-to-left;
+                animation-duration: 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        .head-right {
+            animation-name: appears-from-bottom;
+            animation-duration: 0.75s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .content-box {
+        text-align: center;
+        background: $black50;
+        padding: 4px;
+        opacity: 0;
+        animation-name: appears;
+        animation-duration: 0.25s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
+
+        img {
+            width: 86px;
+            margin-bottom: 5px;
+        }
+
+        .text {
+            display: inline-block;
+            opacity: 0;
+            font-size: 10px;
+            font-weight: 600;
+            animation-name: slide-down-10;
+            animation-duration: 0.5s;
+            animation-delay: 0.5s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .left {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        overflow: hidden;
+    }
+
+    .right {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .count {
+        height: 0px;
+        padding: 0 0 0 74px;
+        background: $black75;
+ 
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 6;
+        animation-name: slide-down-50;
+        animation-duration: 0.75s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+
+        .text {
+            display: inline-block;
+            opacity: 0;
+            font-size: 33px;
+            letter-spacing: 2px;
+
+            animation-name: appears;
+            animation-duration: 0.25s;
+            animation-delay: 0.75s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
