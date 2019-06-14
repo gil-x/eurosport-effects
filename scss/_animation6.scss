@@ -1,0 +1,53 @@
+#animation-6 {
+    position: fixed;
+    bottom: 95px;
+    height: 130px;
+    width: 54vw;
+    margin-left: 23vw;
+
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        * {
+            overflow: hidden;
+
+            span {
+                // opacity: 0;
+                display: inline-block;
+                animation-name: slide-from-bottom;
+                animation-duration: 0.5s;
+                // animation-delay: 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+
+    .title-3 {
+        background: $blue;
+    }
+
+    .title-1 {
+        height: 50px;
+        color: $black100;
+        background: #fff;
+    }
+
+    .title-2, .title-3 {
+        height: 40px;
+
+        color: #fff;
+    }
+
+    .title-2 {
+        background: $black75;;
+
+        // h2 {
+        //     color: $black100;
+        // }
+    }
+
+    
+}

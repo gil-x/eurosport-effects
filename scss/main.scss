@@ -10,6 +10,7 @@ $black75: rgba(0,0,0,0.75);
 $black100: rgba(0,0,0,1);
 $white: rgba(255,255,255,0.85);
 $red: rgba(213,0,50,1);
+$blue: rgba(3,147,197,1);
 
 * {
     margin: 0;
@@ -48,10 +49,11 @@ $red: rgba(213,0,50,1);
 body {
     // background-image: url("../medias/01/bg02.jpg");
     // background-image: url("../medias/04/bg01.jpg");
-    // background-position: bottom;
-    // background-repeat: no-repeat;
-    // width: 100vw;
-    // height: 100vh;
+    background-image: url("../medias/06/bg01.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
 
@@ -71,91 +73,6 @@ body {
 
 @import "animation1";
 
-#animation-2 {
+@import "animation4";
 
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-
-    animation-name: slide-up-90;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-
-    // .container {
-        
-    // }
-    .content-bar {
-        height: 60px;
-        display: flex;
-        // justify-content: center;
-        align-items: center;
-        background: $black100;
-        
-
-        .eurosport {
-            background: $red;
-            height: 60px;
-            width: 360px;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding-right: 40px;
-
-            .logo {
-                opacity: 0;
-                width: 180px;
-
-                animation-name: appears-from-right;
-                animation-duration: 0.5s;
-                animation-delay: 1s;
-                animation-fill-mode: forwards;
-            }
-        }
-
-        .text-container {
-
-            overflow: hidden;
-
-            .text {
-                height: 60px;
-                width: 1560px;
-                display: flex;
-                align-items: center;
-
-                * {
-                    display: inline-block;
-                }
-
-                animation-name: crawl-to-left;
-                animation-duration: 21s;
-                animation-fill-mode: forwards;
-                animation-timing-function: linear;
-
-                p {
-                    color: #fff;
-                    font-size: 22px;
-                    text-transform: uppercase;
-                    transform: translateY(2px);
-                    white-space: nowrap;
-                }
-    
-                .img-box {
-                    width: 50px;
-                    margin: 0 30px;
-
-                    img {
-                        width: 25px;
-                    }
-                }
-            }
-
-            
-        }
-    }
-
-    .footer {
-        height: 90px;
-        background: $black75;
-        border-top: 2px solid #fff;
-    }
-}
+@import "animation6";
