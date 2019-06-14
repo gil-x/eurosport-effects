@@ -2,52 +2,107 @@
     position: fixed;
     bottom: 95px;
     height: 130px;
-    width: 54vw;
-    margin-left: 23vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    // margin-left: 442px;
 
+    .container {
+        width: 1036px;
+        // margin-left: 442px;
+        // grid-template-columns: 1036px;
+        // grid-template-rows: 40px 50px 40px;
 
-    .title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        // flex-direction: column;
+        text-align: center;
 
-        * {
-            overflow: hidden;
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
 
-            span {
-                // opacity: 0;
+            // display: inline-block;
+            // grid-column-start: 1;
+            // grid-column-end: 2;
+
+            // width: 1036px;
+            // width: 80%;
+    
+            * {
+                overflow: hidden;
                 display: inline-block;
-                animation-name: slide-from-bottom;
-                animation-duration: 0.5s;
-                // animation-delay: 1s;
-                animation-fill-mode: forwards;
+    
+                span {
+                    // opacity: 0;
+                    display: inline-block;
+                    opacity: 0;
+                    animation-name: slide-from-bottom;
+                    animation-duration: 0.5s;
+                    animation-delay: 3s;
+                    animation-fill-mode: forwards;
+                    // border : 1px dashed red;
+                }
             }
         }
-    }
-
-    .title-3 {
-        background: $blue;
-    }
-
-    .title-1 {
-        height: 50px;
-        color: $black100;
-        background: #fff;
-    }
-
-    .title-2, .title-3 {
-        height: 40px;
-
-        color: #fff;
-    }
-
-    .title-2 {
-        background: $black75;;
-
-        // h2 {
-        //     color: $black100;
-        // }
-    }
-
     
+        .title-3 {
+            background: $blue;
+            // grid-row-start: 1;
+            // grid-row-end: 2;
+            transform: translateY(80px);
+
+            animation-name: title-3-expend;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+    
+        .title-1 {
+            // height: 50px;
+            width: 0%;
+            height: 0px;
+            color: $black100;
+            background: #fff;
+            // grid-row-start: 2;
+            // grid-row-end: 3;
+            // opacity: 0;
+            // display: none;
+
+            animation-name: title-1-expend;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+    
+        .title-2, .title-3 {
+            height: 0px;
+            color: #fff;
+            transform: translateY(80px);
+
+            span {
+                font-weight: 400;
+            }
+            
+        }
+    
+        .title-2 {
+            background: $black75;
+    
+            grid-row-start: 3;
+            grid-row-end: 4;
+            // opacity: 0;
+
+            animation-name: title-2-expend;
+            animation-duration: 1.5s;
+            animation-delay: 1.5s;
+            animation-fill-mode: forwards;
+            // h2 {
+            //     color: $black100;
+            // }
+        }
+    }
 }
