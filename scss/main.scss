@@ -46,11 +46,12 @@ $blue: rgba(3,147,197,1);
     }
 }
 
-body {
+#body-5 {
     // background-image: url("../medias/01/bg02.jpg");
     // background-image: url("../medias/04/bg01.jpg");
-    background-image: url("../medias/06/bg01.jpg");
-    background-position: bottom;
+    // background-image: url("../medias/06/bg01.jpg");
+    background-image: url("../medias/05/bg02.jpg");
+    background-position: top;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
@@ -74,5 +75,7 @@ body {
 @import "animation1";
 
 @import "animation4";
+
+@import "animation5";
 
 @import "animation6";

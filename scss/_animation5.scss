@@ -1,0 +1,43 @@
+#animation-5 {
+    position: fixed;
+    left: 104px;
+
+    .eurosport {
+        position: fixed;
+        top: 86px;
+        left: 122px;
+        z-index: 260;
+
+        .logo {
+            width: 232px;
+        }
+    }
+
+    .container {
+        width: 345px;
+        height: 496px;
+        background: $black75;
+
+        .title-blue {
+            color: #fff;
+            background: $blue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin: 5px;
+            }
+
+            .img-box {
+                width: 50px;
+                transform: translateY(-2px);
+                // margin: 0 30px;
+
+                img {
+                    width: 25px;
+                }
+            }
+        }
+    }
+}

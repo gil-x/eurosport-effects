@@ -28,9 +28,9 @@
       color: rgba(0, 0, 0, 0.75);
       text-decoration: underline; }
 
-body {
-  background-image: url("../medias/06/bg01.jpg");
-  background-position: bottom;
+#body-5 {
+  background-image: url("../medias/05/bg02.jpg");
+  background-position: top;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh; }
@@ -393,6 +393,34 @@ body {
     height: 90px;
     background: rgba(0, 0, 0, 0.75);
     border-top: 2px solid #fff; }
+
+#animation-5 {
+  position: fixed;
+  left: 104px; }
+  #animation-5 .eurosport {
+    position: fixed;
+    top: 86px;
+    left: 122px;
+    z-index: 260; }
+    #animation-5 .eurosport .logo {
+      width: 232px; }
+  #animation-5 .container {
+    width: 345px;
+    height: 496px;
+    background: rgba(0, 0, 0, 0.75); }
+    #animation-5 .container .title-blue {
+      color: #fff;
+      background: #0393c5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #animation-5 .container .title-blue p {
+        margin: 5px; }
+      #animation-5 .container .title-blue .img-box {
+        width: 50px;
+        transform: translateY(-2px); }
+        #animation-5 .container .title-blue .img-box img {
+          width: 25px; }
 
 #animation-6 {
   position: fixed;
