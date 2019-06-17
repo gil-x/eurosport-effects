@@ -7,16 +7,69 @@
         top: 86px;
         left: 122px;
         z-index: 260;
+        opacity: 0.75;
 
         .logo {
             width: 232px;
+        }
+
+        .channel {
+            width: 19px;
+            margin: 0 10px;
+        }
+
+        .hd {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 ;
+            display: inline-block;
+            transform: translateY(-17px);
+        }
+
+        .live-red-container {
+            display: inline-block;
+            width: 60px;
+            overflow: hidden;
+            transform: translate(20px, -6px);
+            animation-name: squash-from-left;
+            animation-delay: 280ms;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            text-align: right;
+
+            .live-red {
+                color: #fff;
+                font-size: 20px;
+                font-family: monospace;
+                background: $red;
+                padding: 1px 5px 0;
+                display: inline-block;
+                animation-name: slide-to-left;
+                animation-delay: 280ms;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+            }
         }
     }
 
     .container {
         width: 345px;
-        height: 496px;
+        height: 0;
+        // padding-top: 130px;
         background: $black75;
+        animation-name: expend-4-lines-container;
+        animation-delay: 250ms;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+
+        .video-container {
+            width: 345px;
+            height: 165px;
+            // margin-top: 130px;
+            overflow: hidden;
+        }
 
         .title-blue {
             color: #fff;
@@ -24,20 +77,80 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 0;
+            padding: 5px 0;
+            animation-name: expend-to-right;
+            animation-delay: 0.9s;
+            animation-duration: 1.2s;
+            animation-fill-mode: forwards;
+            animation-timing-function: cubic-bezier(.21,.47,.19,1);
 
             p {
-                margin: 5px;
+                font-size: 20px;
+                opacity: 0;
+                animation-name: appears-from-left;
+                animation-delay: 1.35s;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
+                // animation-timing-function: cubic-bezier(.21,.47,.19,1);
+            }
+
+            .tonight {
+                margin-left: 20px;
+            }
+
+            .live {
+                color: $blue;
+                font-size: 12px;
+                font-family: monospace;
+                background: #fff;
+                padding: 1px 5px 0;
             }
 
             .img-box {
                 width: 50px;
                 transform: translateY(-2px);
-                // margin: 0 30px;
+                opacity: 0;
+                animation-name: appears-from-left;
+                animation-delay: 1.35s;
+                animation-duration: 0.5s;
+                animation-fill-mode: forwards;
 
                 img {
                     width: 25px;
                 }
             }
+        }
+
+        .text {
+            color: #fff;
+            font-size: 30px;
+            margin: 2px 0 -4px 20px;
+            // letter-spacing: -1px;
+            // padding: 10px;
+            overflow: hidden;
+
+            span {
+                display: inline-block;
+                opacity: 0;
+                animation-name: slide-from-up;
+                animation-delay: 1750ms;
+                animation-duration: 0.85s;
+                animation-fill-mode: forwards;
+            }
+            .span2 {
+                animation-delay: 1800ms;
+            }
+            .span3 {
+                animation-delay: 1850ms;
+            }
+            .span4 {
+                animation-delay: 1900ms;
+            }
+        }
+
+        .first.text {
+            margin-top: 12px;
         }
     }
 }

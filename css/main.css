@@ -28,7 +28,7 @@
       color: rgba(0, 0, 0, 0.75);
       text-decoration: underline; }
 
-#body-5 {
+#body-0 {
   background-image: url("../medias/05/bg02.jpg");
   background-position: top;
   background-repeat: no-repeat;
@@ -144,6 +144,48 @@
     transform: translateX(1300px); }
   100% {
     transform: translateX(-1500px); } }
+
+/* ANIMATION #5 */
+@keyframes expend-4-lines-container {
+  0% {
+    height: 0;
+    padding-top: 0; }
+  15% {
+    height: 0;
+    padding-top: 130px; }
+  100% {
+    height: 496px;
+    padding-top: 130px; } }
+
+@keyframes slide-to-left {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-60px); } }
+
+@keyframes squash-from-left {
+  0% {
+    width: 60px;
+    transform: translate(20px, -6px); }
+  100% {
+    width: 0;
+    transform: translate(80px, -6px); } }
+
+@keyframes slide-from-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(4px); } }
+
+@keyframes expend-to-right {
+  0% {
+    width: 0;
+    padding: 5px 0; }
+  100% {
+    width: 345px;
+    padding: 5px; } }
 
 /* ANIMATION #6 */
 @keyframes slide-from-bottom {
@@ -401,26 +443,112 @@
     position: fixed;
     top: 86px;
     left: 122px;
-    z-index: 260; }
+    z-index: 260;
+    opacity: 0.75; }
     #animation-5 .eurosport .logo {
       width: 232px; }
+    #animation-5 .eurosport .channel {
+      width: 19px;
+      margin: 0 10px; }
+    #animation-5 .eurosport .hd {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      display: inline-block;
+      transform: translateY(-17px); }
+    #animation-5 .eurosport .live-red-container {
+      display: inline-block;
+      width: 60px;
+      overflow: hidden;
+      transform: translate(20px, -6px);
+      animation-name: squash-from-left;
+      animation-delay: 280ms;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      text-align: right; }
+      #animation-5 .eurosport .live-red-container .live-red {
+        color: #fff;
+        font-size: 20px;
+        font-family: monospace;
+        background: #d50032;
+        padding: 1px 5px 0;
+        display: inline-block;
+        animation-name: slide-to-left;
+        animation-delay: 280ms;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards; }
   #animation-5 .container {
     width: 345px;
-    height: 496px;
-    background: rgba(0, 0, 0, 0.75); }
+    height: 0;
+    background: rgba(0, 0, 0, 0.75);
+    animation-name: expend-4-lines-container;
+    animation-delay: 250ms;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden; }
+    #animation-5 .container .video-container {
+      width: 345px;
+      height: 165px;
+      overflow: hidden; }
     #animation-5 .container .title-blue {
       color: #fff;
       background: #0393c5;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      width: 0;
+      padding: 5px 0;
+      animation-name: expend-to-right;
+      animation-delay: 0.9s;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.21, 0.47, 0.19, 1); }
       #animation-5 .container .title-blue p {
-        margin: 5px; }
+        font-size: 20px;
+        opacity: 0;
+        animation-name: appears-from-left;
+        animation-delay: 1.35s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards; }
+      #animation-5 .container .title-blue .tonight {
+        margin-left: 20px; }
+      #animation-5 .container .title-blue .live {
+        color: #0393c5;
+        font-size: 12px;
+        font-family: monospace;
+        background: #fff;
+        padding: 1px 5px 0; }
       #animation-5 .container .title-blue .img-box {
         width: 50px;
-        transform: translateY(-2px); }
+        transform: translateY(-2px);
+        opacity: 0;
+        animation-name: appears-from-left;
+        animation-delay: 1.35s;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards; }
         #animation-5 .container .title-blue .img-box img {
           width: 25px; }
+    #animation-5 .container .text {
+      color: #fff;
+      font-size: 30px;
+      margin: 2px 0 -4px 20px;
+      overflow: hidden; }
+      #animation-5 .container .text span {
+        display: inline-block;
+        opacity: 0;
+        animation-name: slide-from-up;
+        animation-delay: 1750ms;
+        animation-duration: 0.85s;
+        animation-fill-mode: forwards; }
+      #animation-5 .container .text .span2 {
+        animation-delay: 1800ms; }
+      #animation-5 .container .text .span3 {
+        animation-delay: 1850ms; }
+      #animation-5 .container .text .span4 {
+        animation-delay: 1900ms; }
+    #animation-5 .container .first.text {
+      margin-top: 12px; }
 
 #animation-6 {
   position: fixed;
