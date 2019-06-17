@@ -1,0 +1,47 @@
+.container {
+    svg {
+        position: fixed;
+        right: 195px;
+        bottom: 98px;
+        z-index: 100;
+    }
+    .counter-container {
+        position: fixed;
+        right: 196px;
+        bottom: 99px;
+        z-index: 200;
+        width: 122px;
+        height: 49px;
+        // border: 1px dashed #fff;
+        text-align: center;
+        overflow: hidden;
+        padding: 10px 0 5px 0;
+
+        .counter {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 600;
+            // width: 122px;
+            // position: absolute;
+            // right: 0px;
+            // bottom: 0px;
+            // width: 50px;
+            // text-align: center;
+            transform: translateY(30px);
+            animation-name: counter-roll;
+            animation-duration: 100ms;
+            animation-iteration-count: 13;
+            animation-fill-mode: forwards;
+        }
+
+        .counter-a {
+            animation-delay: 0;
+            // transform: translateY(60px);
+        }
+
+        .counter-b {
+            animation-delay: 100ms;
+            
+        }
+    }
+}

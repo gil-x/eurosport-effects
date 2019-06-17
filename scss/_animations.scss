@@ -50,9 +50,13 @@
     100% { transform: translateX(0); }
 }
 
+/* ANIMATION #2 */
 
-
-
+@keyframes counter-roll {
+    0% { transform: translateY(40px); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(-44px); }
+}
 
 
 

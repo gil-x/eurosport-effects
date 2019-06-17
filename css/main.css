@@ -124,6 +124,15 @@
   100% {
     transform: translateX(0); } }
 
+/* ANIMATION #2 */
+@keyframes counter-roll {
+  0% {
+    transform: translateY(40px); }
+  50% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-44px); } }
+
 /* ANIMATION #4 */
 @keyframes slide-up-90 {
   0% {
@@ -379,6 +388,36 @@
       animation-duration: 0.25s;
       animation-delay: 0.75s;
       animation-fill-mode: forwards; }
+
+.container svg {
+  position: fixed;
+  right: 195px;
+  bottom: 98px;
+  z-index: 100; }
+
+.container .counter-container {
+  position: fixed;
+  right: 196px;
+  bottom: 99px;
+  z-index: 200;
+  width: 122px;
+  height: 49px;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px 0 5px 0; }
+  .container .counter-container .counter {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    transform: translateY(30px);
+    animation-name: counter-roll;
+    animation-duration: 100ms;
+    animation-iteration-count: 13;
+    animation-fill-mode: forwards; }
+  .container .counter-container .counter-a {
+    animation-delay: 0; }
+  .container .counter-container .counter-b {
+    animation-delay: 100ms; }
 
 #animation-4 {
   position: fixed;
