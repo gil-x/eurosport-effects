@@ -1,0 +1,91 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>07 - XXL FRAME</title>
+        <link rel="stylesheet" href="css/main.min.css">
+    </head>
+
+    <body id="body-7">
+
+<video id="video7" class="video-big" autoplay>
+    <source src="medias/sample.mp4" type="video/mp4">
+</video>
+
+<video id="advert" width="345" loop>
+    <source src="medias/07/ILDEX104304.mp4" type="video/mp4">
+</video>
+
+
+<!-- <video id="logo" autoplay loop>
+        <source src="medias/04/LOGO_ANIMATION_1.mp4" type="video/mp4">
+    </video> -->
+
+<section id="animation-7" class="widget">
+
+    
+
+    <div class="eurosport">
+        <img class="logo" src="medias/logo/logo.svg" alt="logo">
+        <img class="channel" src="medias/05/NUM1_CHANNEL.png" alt="1">
+        <span class="hd">HD</span>
+        <div class="live-red-container">
+            <span class="live-red">LIVE</span>
+        </div>
+        
+    </div>
+
+    <div class="container">
+
+        <div class="video-container">
+            <video class="video" width="345" autoplay loop>
+                <source src="medias/sample.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="title-blue">
+            <p class="tonight">TONIGHT</p>
+            <p class="hour">21:00</p>
+            <p class="live">LIVE</p>
+            <div class="img-box">
+                <img src="medias/05/E1_LOGO.png" alt="">
+            </div>
+        </div>
+
+        <p class="first text">
+            <span class="span1">UEFA Cup 2010</span>
+        </p>
+
+        <p class="text">
+            <span class="span2">Biarritz - Clermont</span>
+        </p>
+
+        <p class="text">
+            <span class="span3">Stade de France</span>
+        </p>
+
+        <p class="text">
+            <span class="span4">Ligue 2</span>
+        </p>
+
+    </div>
+    
+</section>
+
+<script src="js/main.js"></script>
+<script>
+
+const advert = document.getElementById("advert");
+const video = document.getElementById("video7");
+
+setTimeout(function() {
+    video.classList.remove("video-big");
+    video.classList.add("video-small");
+    advert.play();
+}, 1500);
+
+</script>
+    </body>
+</html>
+
