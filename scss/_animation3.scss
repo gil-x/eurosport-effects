@@ -1,0 +1,36 @@
+#animation-3 {
+    svg path {
+        animation-name: chrome-bg-roll;
+        animation-delay: 450ms;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    #star {
+        opacity: 0;
+        animation-name: start-slide;
+        animation-delay: 100ms;
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
+    }
+
+    #u {
+        animation-name: morph-u;
+        animation-duration: 2000ms;
+        animation-fill-mode: forwards;
+    }
+
+    #r {
+        animation-name: morph-r;
+        animation-delay: 700ms;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+
+    #t {
+        animation-name: morph-t;
+        animation-delay: 1400ms;
+        animation-duration: 1000ms;
+        animation-fill-mode: forwards;
+    }
+}
