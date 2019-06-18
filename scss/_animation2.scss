@@ -11,6 +11,49 @@
         animation-delay: 1000ms;
         animation-duration: 1000ms;
         animation-fill-mode: forwards;
+
+        #w1a {
+            animation-name: gradient-roll-w1a;
+            animation-delay: 1200ms;
+            animation-duration: 300ms;
+            animation-fill-mode: forwards;
+        }
+        #w1b {
+            animation-name: gradient-roll-w1b;
+            animation-delay: 1200ms;
+            animation-duration: 325ms;
+            animation-fill-mode: forwards;
+        }
+        #b1a {
+            animation-name: gradient-roll-b1a;
+            animation-delay: 1200ms;
+            animation-duration: 325ms;
+            animation-fill-mode: forwards;
+        }
+        #b1b {
+            animation-name: gradient-roll-b1b;
+            animation-delay: 1400ms;
+            animation-duration: 350ms;
+            animation-fill-mode: forwards;
+        }
+        #w2a {
+            animation-name: gradient-roll-w2a;
+            animation-delay: 1400ms;
+            animation-duration: 250ms;
+            animation-fill-mode: forwards;
+        }
+        #w2b {
+            animation-name: gradient-roll-w2b;
+            animation-delay: 1600ms;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+        #orange {
+            animation-name: gradient-roll-orange;
+            animation-delay: 1600ms;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
     
         .counter-container {
             position: fixed;

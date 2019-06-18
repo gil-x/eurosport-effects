@@ -173,6 +173,48 @@
     opacity: 0;
     transform: translateY(-98px); } }
 
+@keyframes gradient-roll-w1a {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
+@keyframes gradient-roll-w1b {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
+@keyframes gradient-roll-b1a {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
+@keyframes gradient-roll-b1b {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
+@keyframes gradient-roll-w2a {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
+@keyframes gradient-roll-w2b {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0.71; } }
+
+@keyframes gradient-roll-orange {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0.71; } }
+
 /* ANIMATION #3 */
 @keyframes start-slide {
   0% {
@@ -467,6 +509,41 @@
   animation-delay: 1000ms;
   animation-duration: 1000ms;
   animation-fill-mode: forwards; }
+  #animation-2 .container #w1a {
+    animation-name: gradient-roll-w1a;
+    animation-delay: 1200ms;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #w1b {
+    animation-name: gradient-roll-w1b;
+    animation-delay: 1200ms;
+    animation-duration: 325ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #b1a {
+    animation-name: gradient-roll-b1a;
+    animation-delay: 1200ms;
+    animation-duration: 325ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #b1b {
+    animation-name: gradient-roll-b1b;
+    animation-delay: 1400ms;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #w2a {
+    animation-name: gradient-roll-w2a;
+    animation-delay: 1400ms;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #w2b {
+    animation-name: gradient-roll-w2b;
+    animation-delay: 1600ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #orange {
+    animation-name: gradient-roll-orange;
+    animation-delay: 1600ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards; }
   #animation-2 .container .counter-container {
     position: fixed;
     right: 196px;
@@ -505,11 +582,14 @@
   animation-duration: 2000ms;
   animation-fill-mode: forwards; }
 
-#animation-3 svg path {
-  animation-name: chrome-bg-roll;
-  animation-delay: 450ms;
-  animation-duration: 1000ms;
-  animation-fill-mode: forwards; }
+#animation-3 svg {
+  width: 800px; }
+  #animation-3 svg path {
+    width: 200px;
+    animation-name: chrome-bg-roll;
+    animation-delay: 450ms;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards; }
 
 #animation-3 #star {
   opacity: 0;

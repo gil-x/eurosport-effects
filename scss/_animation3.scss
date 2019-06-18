@@ -1,9 +1,15 @@
 #animation-3 {
-    svg path {
-        animation-name: chrome-bg-roll;
-        animation-delay: 450ms;
-        animation-duration: 1000ms;
-        animation-fill-mode: forwards;
+
+    svg {
+        width: 800px;
+
+        path {
+            width: 200px;
+            animation-name: chrome-bg-roll;
+            animation-delay: 450ms;
+            animation-duration: 1000ms;
+            animation-fill-mode: forwards;
+        }
     }
 
     #star {
