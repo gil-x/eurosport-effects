@@ -1,10 +1,24 @@
 .container {
-    svg {
-        position: fixed;
-        right: 195px;
-        bottom: 98px;
-        z-index: 100;
-    }
+    position: fixed;
+    right: 195px;
+    bottom: 98px;
+    z-index: 100;
+    height: 157px;
+    // border: 1px dashed #fff;
+    overflow: hidden;
+
+    animation-name: slide-up-n-open;
+    animation-delay: 5ms;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+
+
+    // svg {
+    //     position: fixed;
+    //     right: 195px;
+    //     bottom: 98px;
+    //     z-index: 100;
+    // }
     .counter-container {
         position: fixed;
         right: 196px;
@@ -21,27 +35,46 @@
             color: #fff;
             font-size: 36px;
             font-weight: 600;
-            // width: 122px;
-            // position: absolute;
-            // right: 0px;
-            // bottom: 0px;
-            // width: 50px;
-            // text-align: center;
+            opacity: 0;
             transform: translateY(30px);
             animation-name: counter-roll;
+            // animation-delay: 1000ms;
             animation-duration: 100ms;
             animation-iteration-count: 13;
             animation-fill-mode: forwards;
+
+            // display: none;
         }
 
         .counter-a {
-            animation-delay: 0;
+            animation-delay: 1000ms;
             // transform: translateY(60px);
         }
 
         .counter-b {
-            animation-delay: 100ms;
+            animation-delay: 1100ms;
             
         }
     }
+}
+
+.fake-block {
+    position: fixed;
+    right: 195px;
+    bottom: 3px;
+    z-index: 50;
+    width: 122px;
+    height: 2px;
+    background: $black100;
+
+    animation-name: block-birth;
+    animation-duration: 2000ms;
+    // animation-iteration-count: 13;
+    animation-fill-mode: forwards;
+
+    // div {
+        
+    //     width: 122px;
+    //     height: 5px;
+    // }
 }

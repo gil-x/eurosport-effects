@@ -127,11 +127,46 @@
 /* ANIMATION #2 */
 @keyframes counter-roll {
   0% {
+    opacity: 1;
     transform: translateY(40px); }
   50% {
+    opacity: 1;
     transform: translateY(0); }
   100% {
+    opacity: 1;
     transform: translateY(-44px); } }
+
+@keyframes slide-up-n-open {
+  0% {
+    bottom: 50px;
+    height: 0px; }
+  100% {
+    bottom: 98px;
+    height: 157px; } }
+
+@keyframes block-birth {
+  0% {
+    width: 0;
+    height: 1px;
+    right: 256px;
+    transform: translateY(0); }
+  25% {
+    width: 122px;
+    height: 3px;
+    right: 195px;
+    transform: translateY(0); }
+  50% {
+    width: 122px;
+    height: 3px;
+    right: 195px;
+    transform: translateY(0); }
+  75% {
+    opacity: 1;
+    transform: translateY(-98px); }
+  100% {
+    height: 30px;
+    opacity: 0;
+    transform: translateY(-98px); } }
 
 /* ANIMATION #4 */
 @keyframes slide-up-90 {
@@ -389,35 +424,53 @@
       animation-delay: 0.75s;
       animation-fill-mode: forwards; }
 
-.container svg {
+.container {
   position: fixed;
   right: 195px;
   bottom: 98px;
-  z-index: 100; }
-
-.container .counter-container {
-  position: fixed;
-  right: 196px;
-  bottom: 99px;
-  z-index: 200;
-  width: 122px;
-  height: 49px;
-  text-align: center;
+  z-index: 100;
+  height: 157px;
   overflow: hidden;
-  padding: 10px 0 5px 0; }
-  .container .counter-container .counter {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 600;
-    transform: translateY(30px);
-    animation-name: counter-roll;
-    animation-duration: 100ms;
-    animation-iteration-count: 13;
-    animation-fill-mode: forwards; }
-  .container .counter-container .counter-a {
-    animation-delay: 0; }
-  .container .counter-container .counter-b {
-    animation-delay: 100ms; }
+  animation-name: slide-up-n-open;
+  animation-delay: 5ms;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards; }
+  .container .counter-container {
+    position: fixed;
+    right: 196px;
+    bottom: 99px;
+    z-index: 200;
+    width: 122px;
+    height: 49px;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px 0 5px 0; }
+    .container .counter-container .counter {
+      color: #fff;
+      font-size: 36px;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(30px);
+      animation-name: counter-roll;
+      animation-duration: 100ms;
+      animation-iteration-count: 13;
+      animation-fill-mode: forwards; }
+    .container .counter-container .counter-a {
+      animation-delay: 1000ms; }
+    .container .counter-container .counter-b {
+      animation-delay: 1100ms; }
+
+.fake-block {
+  position: fixed;
+  right: 195px;
+  bottom: 3px;
+  z-index: 50;
+  width: 122px;
+  height: 2px;
+  background: black;
+  animation-name: block-birth;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards; }
 
 #animation-4 {
   position: fixed;
