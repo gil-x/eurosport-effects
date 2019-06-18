@@ -36,6 +36,21 @@
             animation-duration: 350ms;
             animation-fill-mode: forwards;
         }
+
+        #o1 {
+            animation-name: gradient-roll-o1;
+            animation-delay: 1450ms;
+            animation-duration: 250ms;
+            animation-fill-mode: forwards;
+        }
+        #o2 {
+            animation-name: gradient-roll-o2;
+            animation-delay: 1500ms;
+            animation-duration: 275ms;
+            animation-fill-mode: forwards;
+        }
+
+
         #w2a {
             animation-name: gradient-roll-w2a;
             animation-delay: 1400ms;

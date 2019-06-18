@@ -197,6 +197,18 @@
   100% {
     offset: 0; } }
 
+@keyframes gradient-roll-o1 {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
+@keyframes gradient-roll-o2 {
+  0% {
+    offset: 1; }
+  100% {
+    offset: 0; } }
+
 @keyframes gradient-roll-w2a {
   0% {
     offset: 1; }
@@ -528,6 +540,16 @@
     animation-name: gradient-roll-b1b;
     animation-delay: 1400ms;
     animation-duration: 350ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #o1 {
+    animation-name: gradient-roll-o1;
+    animation-delay: 1450ms;
+    animation-duration: 250ms;
+    animation-fill-mode: forwards; }
+  #animation-2 .container #o2 {
+    animation-name: gradient-roll-o2;
+    animation-delay: 1500ms;
+    animation-duration: 275ms;
     animation-fill-mode: forwards; }
   #animation-2 .container #w2a {
     animation-name: gradient-roll-w2a;
