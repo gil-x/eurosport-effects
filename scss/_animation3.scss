@@ -1,7 +1,10 @@
 #animation-3 {
 
     svg {
-        width: 800px;
+        width: 238px;
+        position: fixed;
+        top: 84px;
+        right: 142px;
 
         path {
             width: 200px;
@@ -38,5 +41,54 @@
         animation-delay: 1400ms;
         animation-duration: 1000ms;
         animation-fill-mode: forwards;
+    }
+
+    .live-red-container {
+        display: inline-block;
+        width: 60px;
+        position: fixed;
+        top: 84px;
+        right: 400px;
+        overflow: hidden;
+        // transform: translate(20px, -6px);
+        // animation-name: squash-from-left;
+        // animation-delay: 280ms;
+        // animation-duration: 0.5s;
+        // animation-fill-mode: forwards;
+        text-align: right;
+
+        .live-red {
+            color: #fff;
+            font-size: 20px;
+            font-family: monospace;
+            background: $red;
+            padding: 1px 5px 0;
+            display: inline-block;
+            transform: translateX(-60px);
+            animation-name: slide-to-right;
+            animation-delay: 1s;
+            animation-duration: 0.75s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .channel {
+        position: fixed;
+        top: 89px;
+        right: 118px;
+        width: 13px;
+        opacity: 0;
+        animation: appears 0.7s 0.8s forwards;
+    }
+
+    .hd {
+        position: fixed;
+        top: 81px;
+        right: 76px;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        opacity: 0;
+        animation: appears 1.2s 2.5s forwards;
     }
 }

@@ -28,8 +28,7 @@
       color: rgba(0, 0, 0, 0.75);
       text-decoration: underline; }
 
-#body-0 {
-  background-image: url("../medias/05/bg02.jpg");
+#body-3 {
   background-position: top;
   background-repeat: no-repeat;
   width: 100vw;
@@ -235,6 +234,12 @@
   100% {
     transform: translateX(0);
     opacity: 1; } }
+
+@keyframes slide-to-right {
+  0% {
+    transform: translateX(-60px); }
+  100% {
+    transform: translateX(0); } }
 
 @keyframes morph-u {
   0% {
@@ -605,7 +610,10 @@
   animation-fill-mode: forwards; }
 
 #animation-3 svg {
-  width: 800px; }
+  width: 238px;
+  position: fixed;
+  top: 84px;
+  right: 142px; }
   #animation-3 svg path {
     width: 200px;
     animation-name: chrome-bg-roll;
@@ -636,6 +644,45 @@
   animation-delay: 1400ms;
   animation-duration: 1000ms;
   animation-fill-mode: forwards; }
+
+#animation-3 .live-red-container {
+  display: inline-block;
+  width: 60px;
+  position: fixed;
+  top: 84px;
+  right: 400px;
+  overflow: hidden;
+  text-align: right; }
+  #animation-3 .live-red-container .live-red {
+    color: #fff;
+    font-size: 20px;
+    font-family: monospace;
+    background: #d50032;
+    padding: 1px 5px 0;
+    display: inline-block;
+    transform: translateX(-60px);
+    animation-name: slide-to-right;
+    animation-delay: 1s;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards; }
+
+#animation-3 .channel {
+  position: fixed;
+  top: 89px;
+  right: 118px;
+  width: 13px;
+  opacity: 0;
+  animation: appears 0.7s 0.8s forwards; }
+
+#animation-3 .hd {
+  position: fixed;
+  top: 81px;
+  right: 76px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  animation: appears 1.2s 2.5s forwards; }
 
 #animation-4 {
   position: fixed;
