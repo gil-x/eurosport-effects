@@ -1,2 +1,4 @@
 /_w
 /venv
+.htaccess
+.htpasswd
