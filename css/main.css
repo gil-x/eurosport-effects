@@ -689,13 +689,34 @@
       justify-content: flex-end;
       align-items: center;
       padding-right: 40px; }
-      #animation-4 .content-bar .eurosport .logo {
-        opacity: 0;
-        width: 180px;
-        animation-name: appears-from-right;
-        animation-duration: 0.5s;
-        animation-delay: 1s;
-        animation-fill-mode: forwards; }
+      #animation-4 .content-bar .eurosport svg {
+        width: 238px; }
+        #animation-4 .content-bar .eurosport svg path {
+          width: 180px;
+          animation-name: chrome-bg-roll;
+          animation-delay: 450ms;
+          animation-duration: 1000ms;
+          animation-fill-mode: forwards; }
+    #animation-4 .content-bar #star {
+      opacity: 0;
+      animation-name: start-slide;
+      animation-delay: 100ms;
+      animation-duration: 400ms;
+      animation-fill-mode: forwards; }
+    #animation-4 .content-bar #u {
+      animation-name: morph-u;
+      animation-duration: 2000ms;
+      animation-fill-mode: forwards; }
+    #animation-4 .content-bar #r {
+      animation-name: morph-r;
+      animation-delay: 700ms;
+      animation-duration: 1000ms;
+      animation-fill-mode: forwards; }
+    #animation-4 .content-bar #t {
+      animation-name: morph-t;
+      animation-delay: 1400ms;
+      animation-duration: 1000ms;
+      animation-fill-mode: forwards; }
     #animation-4 .content-bar .text-container {
       overflow: hidden; }
       #animation-4 .content-bar .text-container .text {
