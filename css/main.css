@@ -322,6 +322,22 @@
     width: 345px;
     padding: 5px; } }
 
+@keyframes appears-from-left-minus-18 {
+  0% {
+    opacity: 0;
+    transform: translateX(-35px); }
+  100% {
+    opacity: 1;
+    transform: translateX(-18px); } }
+
+@keyframes appears-from-left-plus-18 {
+  0% {
+    opacity: 0;
+    transform: translateX(-25px); }
+  100% {
+    opacity: 1;
+    transform: translateX(18px); } }
+
 /* ANIMATION #6 */
 @keyframes slide-from-bottom {
   0% {
@@ -785,13 +801,20 @@
         animation-duration: 0.5s;
         animation-fill-mode: forwards; }
       #animation-5 .container .title-blue .tonight {
-        margin-left: 20px; }
+        margin-left: 20px;
+        padding-top: 5px; }
+      #animation-5 .container .title-blue .hour {
+        padding-top: 5px;
+        display: inline-block;
+        transform: translateX(-18px);
+        animation-name: appears-from-left-minus-18; }
       #animation-5 .container .title-blue .live {
         color: #0393c5;
         font-size: 12px;
         font-family: monospace;
         background: #fff;
-        padding: 1px 5px 0; }
+        padding: 1px 5px 0;
+        animation-name: appears-from-left-plus-18; }
       #animation-5 .container .title-blue .img-box {
         width: 50px;
         transform: translateY(-2px);

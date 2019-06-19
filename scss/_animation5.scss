@@ -56,7 +56,6 @@
     .container {
         width: 345px;
         height: 0;
-        // padding-top: 130px;
         background: $black75;
         animation-name: expend-4-lines-container;
         animation-delay: 250ms;
@@ -67,7 +66,6 @@
         .video-container {
             width: 345px;
             height: 165px;
-            // margin-top: 130px;
             overflow: hidden;
         }
 
@@ -92,11 +90,18 @@
                 animation-delay: 1.35s;
                 animation-duration: 0.5s;
                 animation-fill-mode: forwards;
-                // animation-timing-function: cubic-bezier(.21,.47,.19,1);
             }
 
             .tonight {
                 margin-left: 20px;
+                padding-top: 5px;
+            }
+
+            .hour {
+                padding-top: 5px;
+                display: inline-block;
+                transform: translateX(-18px);
+                animation-name: appears-from-left-minus-18;
             }
 
             .live {
@@ -105,6 +110,7 @@
                 font-family: monospace;
                 background: #fff;
                 padding: 1px 5px 0;
+                animation-name: appears-from-left-plus-18;
             }
 
             .img-box {
@@ -126,8 +132,6 @@
             color: #fff;
             font-size: 30px;
             margin: 2px 0 -4px 20px;
-            // letter-spacing: -1px;
-            // padding: 10px;
             overflow: hidden;
 
             span {

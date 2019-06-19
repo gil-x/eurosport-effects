@@ -200,6 +200,17 @@
     100% { width: 345px; padding: 5px;}
 }
 
+@keyframes appears-from-left-minus-18 {
+    0% { opacity: 0; transform: translateX(-35px); }
+    100% { opacity: 1; transform: translateX(-18px); }
+}
+
+@keyframes appears-from-left-plus-18 {
+    0% { opacity: 0; transform: translateX(-25px); }
+    100% { opacity: 1; transform: translateX(18px); }
+}
+
+
 /* ANIMATION #6 */
 
 @keyframes slide-from-bottom {
@@ -216,7 +227,6 @@
 
 @keyframes title-expend {
     50% { width: 50% ; }
-    // 75% { width: 88% ; }
     100% { width: 100% ; }
 }
 
